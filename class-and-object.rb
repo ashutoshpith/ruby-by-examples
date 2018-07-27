@@ -25,3 +25,25 @@ a = First.new
 b = Second.new
 a.print_global
 b.print_global
+
+#instance variable
+
+class Custmer
+  def initialize(id, name, add)
+    @cust_id = id
+    @cust_name = name
+    @cust_add = add
+  end
+
+  def display()
+    puts '#@cust_id'
+    puts '#@cust_name'
+    puts '#@cust_add'
+    
+  end  
+end
+
+cust1 = Custmer.new('1', 'Ashutosh', 'Chennai')
+cust2 = Custmer.new('2', 'Any', 'kolkata')
+cust1.display()
+cust2.display()
