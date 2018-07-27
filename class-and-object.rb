@@ -61,3 +61,21 @@ end
 
 Parent.new
 Child.new
+
+class A
+  @a = 20
+  def initialize
+    puts "#{@a}"
+  end
+end
+
+class B < A
+  def initialize
+      super
+      puts "hello"
+  end
+end
+
+A.new
+B.new
+
