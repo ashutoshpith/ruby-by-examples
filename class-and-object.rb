@@ -11,13 +11,13 @@ object.hello
 $gv = 10
 class First
  def print_global
-  puts 'Global variable in First is #{$gv}' 
+  puts "Global variable in First is #{$gv}" 
 end
 end
 
 class Second
  def print_global
- puts 'Here is second time use #{$gv}' 
+ puts "Here is second time use #{$gv}" 
 end
 end
 
@@ -43,3 +43,21 @@ end
 cir = Circle.new(2)
 a = cir.get_area()
 puts "Area of the box is: #{a}"
+
+#inheritance
+
+class Parent
+  def initialize
+    puts "Parent class created"
+  end
+end
+
+class Child < Parent
+  def initialize
+    super
+    puts "Child class created"
+  end
+end
+
+Parent.new
+Child.new
